@@ -1,0 +1,22 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+    var items = Model;
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+
+    <div id="canvas">
+        <button id="spin" onclick="randomItem()">click</button>
+    </div>
+
+    @foreach (var item in items)
+    {
+        <img style="display: none;" src="@item" />
+    }
+
+</div>
+
+@* <input type="button" value="spin" style="float:left;" id='spin' />
+<canvas id="canvas" width="500" height="500"></canvas> *@
